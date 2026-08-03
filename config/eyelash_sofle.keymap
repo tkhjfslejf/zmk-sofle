@@ -147,5 +147,7 @@
             display-name = "LAYER4";
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
+
+        layer_5 {status = "reserved";};
     };
 };
