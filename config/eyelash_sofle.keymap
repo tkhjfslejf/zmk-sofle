@@ -225,5 +225,6 @@
             display-name = "LAYER10";
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
+
     };
 };
