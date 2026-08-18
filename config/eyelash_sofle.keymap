@@ -97,6 +97,13 @@
 
         layer1 {
             status = "reserved";
+            sensor-bindings = <&rsr_vol &rsr_trans>;
+            display-name = "LAYER1";
         };
+        layer2 {
+            status = "reserved";
+        };
+        layer3 {status = "reserved";};
+        layer4 {status = "reserved";};
     };
 };
