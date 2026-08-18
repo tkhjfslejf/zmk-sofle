@@ -114,6 +114,5 @@
         layer17 {status = "reserved";};
         layer18 {status = "reserved";};
         layer19 {status = "reserved";};
-        layer20 {status = "reserved";};
     };
 };
