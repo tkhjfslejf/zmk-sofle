@@ -84,7 +84,13 @@
         compatible = "zmk,keymap";
 
         layer0 {
-            bindings = <>;
+            bindings = <
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+            >;
             sensor-bindings = <&rsr_vol &rsr_trans>;
             display-name = "LAYER0";
         };
