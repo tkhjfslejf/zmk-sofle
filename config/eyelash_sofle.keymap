@@ -84,8 +84,7 @@
         compatible = "zmk,keymap";
 
         layer0 {
-            sensor-bindings = <&rsr_vol &rsr_trans>;
-            display-name = "LAYER0";
+            status = "reserved";
         };
 
     };
