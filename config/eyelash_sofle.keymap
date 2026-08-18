@@ -84,7 +84,6 @@
         compatible = "zmk,keymap";
 
         layer0 {
-            bindings = <>;
             sensor-bindings = <&rsr_vol &rsr_trans>;
             display-name = "LAYER0";
         };
