@@ -110,6 +110,5 @@
         layer13 {status = "reserved";};
         layer14 {status = "reserved";};
         layer15 {status = "reserved";};
-        layer16 {status = "reserved";};
     };
 };
