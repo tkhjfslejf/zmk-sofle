@@ -29,13 +29,6 @@
 
 &soft_off { hold-time-ms = <2000>; };
 
-&mt {
-    tapping-term-ms = <150>; // 长按的判定时间
-};
-&lt {
-    tapping-term-ms = <150>; // 长按换层的判定时间
-};
-
 / {
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
