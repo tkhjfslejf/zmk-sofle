@@ -53,10 +53,10 @@
             tap-ms = <0>;
         };
 
-        ctrl_x: ctrl_x {
+        morph_c_space_2_ctrl_x: morph_c_space_2_ctrl_x {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp X>;
+            bindings = <&kp SPACE>, <&kp LCTRL &kp X>;
             mods = <(MOD_LCTL)>;
         };
     };
@@ -85,7 +85,8 @@
 
             label = "SHIFT_MCLK";
         };
-        macros_a_layer: macros_a_layer{
+
+        macros_a_layer4: macros_a_layer4{
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
@@ -98,12 +99,14 @@
             #binding-cells = <2>;
             bindings = 
                 <&macro_param_1to1>,
-                <&macro_param_2to2>,
-                <&macro_press &kp MACRO_PLACEHOLDER &mo MACRO_PLACEHOLDER>,
+                <&macro_press &kp MACRO_PLACEHOLDER>,
+                <&macro_param_2to1>,
+                <&macro_press &mo MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_param_1to1>,
-                <&macro_param_2to2>,
-                <&macro_release &kp MACRO_PLACEHOLDER &mo MACRO_PLACEHOLDER>;
+                <&macro_release &kp MACRO_PLACEHOLDER>,
+                <&macro_param_2to1>,
+                <&macro_release &mo MACRO_PLACEHOLDER>;
         };
     };
 
