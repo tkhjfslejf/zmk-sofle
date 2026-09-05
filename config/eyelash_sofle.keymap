@@ -94,7 +94,7 @@
 
         layer0 {
             bindings = <
-&kp Q  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
+&kp Q  &none  &none  &a_layer  &none  &none    &none  &none  &none  &none  &none  &none  &none
 &none  &none  &a_layer  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
