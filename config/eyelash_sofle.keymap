@@ -56,7 +56,7 @@
         morph_c_space_2_ctrl_x: morph_c_space_2_ctrl_x {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp LCTRL &kp X>;
+            bindings = <&kp SPACE>, <&kp LC(X)>;
             mods = <(MOD_LCTL)>;
         };
     };
@@ -86,14 +86,7 @@
             label = "SHIFT_MCLK";
         };
 
-        macros_a_layer4: macros_a_layer4{
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = 
-                <&macro_press &kp A &mo 4>,
-                <&macro_pause_for_release>,
-                <&macro_release &kp A &mo 4>;
-        };
+        //触发按键，同时触发临时层
         macros_key_layer: macros_key_layer{
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
