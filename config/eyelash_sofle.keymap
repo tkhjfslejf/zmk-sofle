@@ -52,6 +52,13 @@
             #sensor-binding-cells = <0>;
             tap-ms = <0>;
         };
+
+        ctrl_x: ctrl_x {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&kp X>;
+            mods = <(MOD_LCTL)>;
+        };
     };
 
     combos {
