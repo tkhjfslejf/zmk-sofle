@@ -78,14 +78,25 @@
 
             label = "SHIFT_MCLK";
         };
-        a_layer: a_layer{
+        macros_a_layer: macros_a_layer{
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
-                <&macro_press &kp A>,
-                <&mo 4>,
+                <&macro_press &kp A &mo 4>,
                 <&macro_pause_for_release>,
-                <&macro_release &kp A>;
+                <&macro_release &kp A &mo 4>;
+        };
+        macros_key_layer: macros_key_layer{
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = 
+                <&macro_param_1to1>
+                <&macro_param_2to2>
+                <&macro_press &kp MACRO_PLACEHOLDER &mo MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_param_1to1>
+                <&macro_param_2to2>
+                <&macro_release &kp MACRO_PLACEHOLDER &mo MACRO_PLACEHOLDER>;
         };
     };
 
