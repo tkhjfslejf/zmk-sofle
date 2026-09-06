@@ -53,11 +53,18 @@
             tap-ms = <0>;
         };
 
-        mod_morph_ctrl_space_ctrl_x: mod_morph_ctrl_space_ctrl_x {
+        morph_ctrl_space_ctrl_x: morph_ctrl_space_ctrl_x {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp LC(X)>;
             mods = <(MOD_LCTL)>;
+        };
+
+        morph_shift: morph_shift {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp>, <&kp>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
@@ -113,6 +120,15 @@
                 <&macro_tap &tog MACRO_PLACEHOLDER>;
         };
 
+        //
+        macros_morph_shift: macros_morph_shift{
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = 
+                <&macro_param_1to1>,
+                <&macro_param_2to2>,
+                <&morph_shift MACRO_PLACEHOLDER>,
+        };
     };
 
     keymap {
