@@ -86,7 +86,7 @@
             label = "SHIFT_MCLK";
         };
 
-        //触发按键，同时触发临时层
+        //同时触发按键和层
         macros_key_layer: macros_key_layer{
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
@@ -101,6 +101,18 @@
                 <&macro_param_2to1>,
                 <&macro_release &mo MACRO_PLACEHOLDER>;
         };
+
+        //同时触发按键和层 - 开关形式
+        macros_key_layer_toggle: macros_key_layer_toggle{
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = 
+                <&macro_param_1to1>,
+                <&macro_tap &kt MACRO_PLACEHOLDER>,
+                <&macro_param_2to1>,
+                <&macro_tap &tog MACRO_PLACEHOLDER>;
+        };
+
     };
 
     keymap {
