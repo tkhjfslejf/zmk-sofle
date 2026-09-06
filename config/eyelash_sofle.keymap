@@ -53,7 +53,7 @@
             tap-ms = <0>;
         };
 
-        morph_c_space_2_ctrl_x: morph_c_space_2_ctrl_x {
+        mod_morph_ctrl(space-ctrl_x): mod_morph_ctrl(space-ctrl_x) {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp LC(X)>;
