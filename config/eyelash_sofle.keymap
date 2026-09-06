@@ -62,7 +62,7 @@
 
         morph_shift: morph_shift {
             compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
             mods = <(MOD_LSFT)>;
         };
@@ -120,15 +120,6 @@
                 <&macro_tap &tog MACRO_PLACEHOLDER>;
         };
 
-        //
-        macros_morph_shift: macros_morph_shift{
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
-            bindings = 
-                <&macro_param_1to1>,
-                <&macro_param_2to2>,
-                <&macro_tap &morph_shift MACRO_PLACEHOLDER>,
-        };
     };
 
     keymap {
