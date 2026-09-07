@@ -56,7 +56,7 @@
         td_v_r: td_v_r {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp v>, <&kp LC(LA(r))>;
+            bindings = <&kp V>, <&kp LC(LA(R))>;
         };
     };
 
