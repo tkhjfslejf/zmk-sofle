@@ -53,10 +53,9 @@
             tap-ms = <0>;
         };
 
-        td_v_CAr: td_v_CAr {
+        td_v_car: td_v_car {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
             bindings = <&kp v>, <&kp LC(LA(r))>;
         };
     };
