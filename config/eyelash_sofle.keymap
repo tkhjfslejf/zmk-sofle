@@ -53,13 +53,13 @@
             tap-ms = <0>;
         };
 
-        // 单击长按设置不同按键
-        mt2: mod_tap2 {
+        // 单击长按设置不同按键 - 优先触发长按（单击时，会先触发一次长按按键，再触发一次单击）
+        mt2: mt2 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
-            hold-while-undecided;
+            hold-while-undecided;    // 优先触发长按
         };
     };
 
@@ -127,6 +127,16 @@
                 <&macro_pause_for_release>,
                 <&macro_param_2to1>,
                 <&macro_release &kp MACRO_PLACEHOLDER>;
+        };
+
+        // 同时触发按键和层 - 单击为开关切换，长按为临时触发
+        macros_key_layer_mt2: macros_key_layer_mt2{
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = 
+                <&macro_param_1to1>,
+                <&macro_param_2to2>,
+                <&mt2 MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
         };
     };
 
