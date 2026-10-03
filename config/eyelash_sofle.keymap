@@ -61,6 +61,14 @@
             bindings = <&kp>, <&kp>;
             hold-while-undecided;    // 优先触发长按
         };
+
+        mo_tog: behavior_mo_tog {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&macros_key_layer>, <&macros_key_layer>;
+            hold-while-undecided;    // 优先触发长按
+        };
     };
 
     combos {
