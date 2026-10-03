@@ -62,13 +62,6 @@
             hold-while-undecided;    // 优先触发长按
         };
 
-        mo_tog: behavior_mo_tog {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LC(z)>, <&macros_key_layer space &mo 2>;
-            hold-while-undecided;    // 优先触发长按
-        };
     };
 
     combos {
