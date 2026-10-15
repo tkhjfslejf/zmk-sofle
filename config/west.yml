@@ -31,7 +31,6 @@ manifest:
     - name: zmk-module-runtime-input-processor
       remote: cormoran
       revision: zmk-v0.3.0.0
-      
     - name: zmk-raw-hid
       remote: zzeneg
       revision: main
