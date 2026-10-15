@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: cormoran
       url-base: https://github.com/cormoran
+     - name: zzeneg
+      url-base: https://github.com/zzeneg
     - name: tkhjfslejf
       url-base: https://github.com/tkhjfslejf
   projects:
