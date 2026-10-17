@@ -4,6 +4,10 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: cormoran
       url-base: https://github.com/cormoran
+    - name: zzeneg
+      url-base: https://github.com/zzeneg
+    - name: tkhjfslejf
+      url-base: https://github.com/tkhjfslejf
   projects:
     - name: eyelash_sofle
       url: https://github.com/a741725193/zmk-sofle
@@ -27,5 +31,11 @@ manifest:
     - name: zmk-module-runtime-input-processor
       remote: cormoran
       revision: zmk-v0.3.0.0
+    - name: zmk-raw-hid
+      remote: zzeneg
+      revision: main
+    - name: zmk-feature-app-layer
+      remote: tkhjfslejf
+      revision: main
   self:
     path: config
