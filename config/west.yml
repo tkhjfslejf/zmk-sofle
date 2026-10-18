@@ -37,8 +37,5 @@ manifest:
     - name: zmk-feature-app-layer
       remote: tkhjfslejf
       revision: main
-    - name: zmk-behavior-key-layer
-      remote: tkhjfslejf
-      revision: main
   self:
     path: config
