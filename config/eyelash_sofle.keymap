@@ -151,7 +151,7 @@
 
         layer0 {
             bindings = <
-&key_layer a 1  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
+&key_layer A 1  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
