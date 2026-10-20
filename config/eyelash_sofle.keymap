@@ -60,6 +60,11 @@
             bindings = <&kp>, <&kp>;
             hold-while-undecided;
         };
+
+        key_layer: key_layer {
+            compatible = "zmk,behavior-key-layer";
+            #binding-cells = <2>;
+        };
     };
 
     combos {
