@@ -64,6 +64,7 @@
         key_layer: key_layer {
             compatible = "zmk,behavior-key-layer";
             #binding-cells = <2>;
+            bindings = <&kp>, <&mo>;
         };
     };
 
