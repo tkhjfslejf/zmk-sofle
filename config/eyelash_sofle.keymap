@@ -151,40 +151,17 @@
 
         layer0 {
             bindings = <
-&key_layer A 1  &none  &key_layer C 2  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&key_layer A 1  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&key_layer B 2  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
             >;
             sensor-bindings = <&rsr_vol &rsr_trans>;
             display-name = "LAYER0";
         };
-
-        layer1 {
-            bindings = <
-&none  &kp B  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&none  &kp B  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-            >;
-            sensor-bindings = <&rsr_vol &rsr_trans>;
-            display-name = "LAYER1";
-        };
-
-        layer2 {
-            bindings = <
-&none  &none  &none  &kp D  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&none  &kp C  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-            >;
-            sensor-bindings = <&rsr_vol &rsr_trans>;
-            display-name = "LAYER2";
-        };
-
+        layer1 {status = "reserved";};
+        layer2 {status = "reserved";};
         layer3 {status = "reserved";};
         layer4 {status = "reserved";};
         layer5 {status = "reserved";};
@@ -198,5 +175,6 @@
         layer13 {status = "reserved";};
         layer14 {status = "reserved";};
         layer15 {status = "reserved";};
+        layer16 {status = "reserved";};
     };
 };
