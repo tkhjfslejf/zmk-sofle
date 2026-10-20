@@ -40,5 +40,8 @@ manifest:
     - name: zmk-behavior-key-layer
       remote: tkhjfslejf
       revision: main
+    - name: zmk-behavior-hold-tap-layer
+      remote: tkhjfslejf
+      revision: main
   self:
     path: config
