@@ -65,6 +65,12 @@
             compatible = "zmk,behavior-key-layer";
             #binding-cells = <2>;
         };
+
+        mod_tap_layer: mod_tap_layer {
+            compatible = "zmk,behavior-hold-tap-layer";
+            #binding-cells = <3>;
+            tapping-term-ms = <200>;
+        };
     };
 
     combos {
@@ -151,9 +157,9 @@
 
         layer0 {
             bindings = <
-&key_layer A 1  &none  &key_layer C 2  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&key_layer A 1  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&key_layer B 2  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
+&mod_tap_layer A B 1  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
+&mod_tap_layer Q W 2  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
             >;
@@ -163,8 +169,8 @@
 
         layer1 {
             bindings = <
-&none  &kp B  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&none  &kp B  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
+&none  &kp C  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
@@ -175,9 +181,9 @@
 
         layer2 {
             bindings = <
-&none  &none  &none  &kp D  &none  &none    &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&none  &kp C  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
+&none  &E  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
             >;
