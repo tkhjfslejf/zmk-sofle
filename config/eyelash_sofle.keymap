@@ -66,11 +66,6 @@
             #binding-cells = <2>;
         };
 
-        mod_tap_layer: mod_tap_layer {
-            compatible = "zmk,behavior-hold-tap-layer";
-            #binding-cells = <3>;
-            tapping-term-ms = <200>;
-        };
     };
 
     combos {
@@ -157,8 +152,8 @@
 
         layer0 {
             bindings = <
-&mod_tap_layer A B 1  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&mod_tap_layer Q W 2  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
@@ -167,30 +162,8 @@
             display-name = "LAYER0";
         };
 
-        layer1 {
-            bindings = <
-&none  &kp C  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-            >;
-            sensor-bindings = <&rsr_vol &rsr_trans>;
-            display-name = "LAYER1";
-        };
-
-        layer2 {
-            bindings = <
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&none  &kp E  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-            >;
-            sensor-bindings = <&rsr_vol &rsr_trans>;
-            display-name = "LAYER2";
-        };
-
+        layer1 {status = "reserved";};
+        layer2 {status = "reserved";};
         layer3 {status = "reserved";};
         layer4 {status = "reserved";};
         layer5 {status = "reserved";};
