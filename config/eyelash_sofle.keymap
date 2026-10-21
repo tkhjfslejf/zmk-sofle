@@ -66,6 +66,13 @@
             #binding-cells = <2>;
         };
 
+        hold_tap_layer: hold_tap_layer {
+            compatible = "zmk,behavior-hold-tap-layer";
+            #binding-cells = <3>;
+            tapping-term-ms = <200>;
+            mode = "hold-first";
+        };
+
     };
 
     combos {
