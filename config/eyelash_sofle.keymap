@@ -70,7 +70,7 @@
             compatible = "zmk,behavior-hold-tap-layer";
             #binding-cells = <3>;
             tapping-term-ms = <200>;
-            mode = "hold-first";
+            mode = <0>;
         };
 
     };
