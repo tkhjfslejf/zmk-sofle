@@ -61,6 +61,14 @@
             hold-while-undecided;
         };
 
+        mod_tap_hold_layr_6: mod_tap_hold_layr_6 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&macros_key_layer_6>, <&kp>;
+            hold-while-undecided;
+        };
+
         key_layer: key_layer {
             compatible = "zmk,behavior-key-layer";
             #binding-cells = <2>;
@@ -106,6 +114,19 @@
                 <&macro_release &kp MACRO_PLACEHOLDER>,
                 <&macro_param_2to1>,
                 <&macro_release &mo MACRO_PLACEHOLDER>;
+        };
+
+        macros_key_layer_6: macros_key_layer_6{
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = 
+                <&macro_param_1to1>,
+                <&macro_press &kp MACRO_PLACEHOLDER>,
+                <&macro_press &mo 6>,
+                <&macro_pause_for_release>,
+                <&macro_param_1to1>,
+                <&macro_release &kp MACRO_PLACEHOLDER>,
+                <&macro_release &mo 6>;
         };
 
         macros_key_layer_toggle: macros_key_layer_toggle{
