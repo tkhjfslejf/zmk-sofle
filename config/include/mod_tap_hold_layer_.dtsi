@@ -1,0 +1,104 @@
+/ {
+    behaviors {
+        // 单击触发按键，长按触发另一个按键并换层 - 优先触发长按
+        mod_tap_hold_layer_6: mod_tap_hold_layer_6 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&macros_key_layer_6>, <&kp>;
+            hold-while-undecided;
+        };
+        mod_tap_hold_layer_7: mod_tap_hold_layer_7 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&macros_key_layer_7>, <&kp>;
+            hold-while-undecided;
+        };
+        mod_tap_hold_layer_8: mod_tap_hold_layer_8 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&macros_key_layer_8>, <&kp>;
+            hold-while-undecided;
+        };
+        mod_tap_hold_layer_9: mod_tap_hold_layer_9 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&macros_key_layer_9>, <&kp>;
+            hold-while-undecided;
+        };
+        mod_tap_hold_layer_10: mod_tap_hold_layer_10 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&macros_key_layer_10>, <&kp>;
+            hold-while-undecided;
+        };
+    };
+
+    macros {
+        // 同时触发按键和层 - 固定的层，配合mod_tap_hold_layer用
+        macros_key_layer_6: macros_key_layer_6{
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = 
+                <&macro_param_1to1>,
+                <&macro_press &kp MACRO_PLACEHOLDER>,
+                <&macro_press &mo 6>,
+                <&macro_pause_for_release>,
+                <&macro_param_1to1>,
+                <&macro_release &kp MACRO_PLACEHOLDER>,
+                <&macro_release &mo 6>;
+        };
+        macros_key_layer_7: macros_key_layer_7{
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = 
+                <&macro_param_1to1>,
+                <&macro_press &kp MACRO_PLACEHOLDER>,
+                <&macro_press &mo 7>,
+                <&macro_pause_for_release>,
+                <&macro_param_1to1>,
+                <&macro_release &kp MACRO_PLACEHOLDER>,
+                <&macro_release &mo 7>;
+        };
+        macros_key_layer_8: macros_key_layer_8{
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = 
+                <&macro_param_1to1>,
+                <&macro_press &kp MACRO_PLACEHOLDER>,
+                <&macro_press &mo 8>,
+                <&macro_pause_for_release>,
+                <&macro_param_1to1>,
+                <&macro_release &kp MACRO_PLACEHOLDER>,
+                <&macro_release &mo 8>;
+        };
+        macros_key_layer_9: macros_key_layer_9{
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = 
+                <&macro_param_1to1>,
+                <&macro_press &kp MACRO_PLACEHOLDER>,
+                <&macro_press &mo 9>,
+                <&macro_pause_for_release>,
+                <&macro_param_1to1>,
+                <&macro_release &kp MACRO_PLACEHOLDER>,
+                <&macro_release &mo 9>;
+        };
+        macros_key_layer_10: macros_key_layer_10{
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = 
+                <&macro_param_1to1>,
+                <&macro_press &kp MACRO_PLACEHOLDER>,
+                <&macro_press &mo 10>,
+                <&macro_pause_for_release>,
+                <&macro_param_1to1>,
+                <&macro_release &kp MACRO_PLACEHOLDER>,
+                <&macro_release &mo 10>;
+        };
+    };
+}
