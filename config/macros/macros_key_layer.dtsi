@@ -1,5 +1,47 @@
 / {
     macros {
+        // 同时触发按键和层
+        macros_key_layer: macros_key_layer{
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = 
+                <&macro_param_1to1>,
+                <&macro_press &kp MACRO_PLACEHOLDER>,
+                <&macro_param_2to1>,
+                <&macro_press &mo MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_param_1to1>,
+                <&macro_release &kp MACRO_PLACEHOLDER>,
+                <&macro_param_2to1>,
+                <&macro_release &mo MACRO_PLACEHOLDER>;
+        };
+
+        // 同时触发按键和层 - 开关形式
+        macros_key_layer_toggle: macros_key_layer_toggle{
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = 
+                <&macro_param_1to1>,
+                <&macro_tap &kt MACRO_PLACEHOLDER>,
+                <&macro_param_2to1>,
+                <&macro_tap &tog MACRO_PLACEHOLDER>;
+        };
+
+        // 抬起一个按键，并触发另一个按键
+        macros_up_key_tap_key: macros_up_key_tap_key{
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = 
+                <&macro_param_1to1>,
+                <&macro_release &kp MACRO_PLACEHOLDER>,
+                <&macro_param_2to1>,
+                <&macro_press &kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_param_2to1>,
+                <&macro_release &kp MACRO_PLACEHOLDER>;
+        };
+
+        // 同时触发按键和层 - 固定的层，配合hold-tap用
         macros_key_layer_6: macros_key_layer_6{
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;

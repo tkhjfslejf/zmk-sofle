@@ -63,7 +63,7 @@
             hold-while-undecided;
         };
 
-        mod_tap_hold_layr_6: mod_tap_hold_layr_6 {
+        mod_tap_hold_layer_6: mod_tap_hold_layer_6 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -74,6 +74,7 @@
         key_layer: key_layer {
             compatible = "zmk,behavior-key-layer";
             #binding-cells = <2>;
+            bindings = <&kp>, <&mo>;
         };
 
     };
@@ -103,43 +104,7 @@
             label = "SHIFT_MCLK";
         };
 
-        macros_key_layer: macros_key_layer{
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
-            bindings = 
-                <&macro_param_1to1>,
-                <&macro_press &kp MACRO_PLACEHOLDER>,
-                <&macro_param_2to1>,
-                <&macro_press &mo MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_param_1to1>,
-                <&macro_release &kp MACRO_PLACEHOLDER>,
-                <&macro_param_2to1>,
-                <&macro_release &mo MACRO_PLACEHOLDER>;
-        };
-
-        macros_key_layer_toggle: macros_key_layer_toggle{
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
-            bindings = 
-                <&macro_param_1to1>,
-                <&macro_tap &kt MACRO_PLACEHOLDER>,
-                <&macro_param_2to1>,
-                <&macro_tap &tog MACRO_PLACEHOLDER>;
-        };
-
-        macros_up_key_tap_key: macros_up_key_tap_key{
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
-            bindings = 
-                <&macro_param_1to1>,
-                <&macro_release &kp MACRO_PLACEHOLDER>,
-                <&macro_param_2to1>,
-                <&macro_press &kp MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_param_2to1>,
-                <&macro_release &kp MACRO_PLACEHOLDER>;
-        };
+        
 
         macros_2key: macros_2key{
             compatible = "zmk,behavior-macro-two-param";
