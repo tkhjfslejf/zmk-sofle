@@ -63,9 +63,17 @@
             hold-while-undecided;
         };
 
+        // 同时触发按键和层
         key_layer: key_layer {
             compatible = "zmk,behavior-key-layer";
             #binding-cells = <2>;
+        };
+
+        // 同时触发按键和层 - 按下时触发其他按键，自动释放已按下的按键，避免影响其他按键
+        key_layer_release: key_layer_release {
+            compatible = "zmk,behavior-key-layer";
+            #binding-cells = <2>;
+            release_on_other_key;
         };
 
     };
