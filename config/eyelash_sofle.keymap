@@ -55,6 +55,7 @@
             tap-ms = <0>;
         };
 
+        // 单击和长按设置不同按键 - 优先触发长按
         mod_tap_hold: mod_tap_hold {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -74,6 +75,13 @@
             compatible = "zmk,behavior-key-layer";
             #binding-cells = <2>;
             release_on_other_key;
+        };
+
+        // 同时触发按键和层 - 开关形式
+        key_layer_toggle: key_layer_toggle {
+            compatible = "zmk,behavior-key-layer";
+            #binding-cells = <2>;
+            toggle-mode;
         };
 
     };
