@@ -55,48 +55,40 @@
             #binding-cells = <1>;
             bindings = 
                 <&macro_param_1to1>,
-                <&macro_press &kp MACRO_PLACEHOLDER>,
-                <&macro_press &mo 7>,
+                <&key_layer_toggle_release MACRO_PLACEHOLDER 7>,
                 <&macro_pause_for_release>,
                 <&macro_param_1to1>,
-                <&macro_release &kp MACRO_PLACEHOLDER>,
-                <&macro_release &mo 7>;
+                <&key_layer_toggle_release MACRO_PLACEHOLDER 7>;
         };
         z_macros_key_layer_8: z_macros_key_layer_8{
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = 
                 <&macro_param_1to1>,
-                <&macro_press &kp MACRO_PLACEHOLDER>,
-                <&macro_press &mo 8>,
+                <&key_layer_toggle_release MACRO_PLACEHOLDER 8>,
                 <&macro_pause_for_release>,
                 <&macro_param_1to1>,
-                <&macro_release &kp MACRO_PLACEHOLDER>,
-                <&macro_release &mo 8>;
+                <&key_layer_toggle_release MACRO_PLACEHOLDER 8>;
         };
         z_macros_key_layer_9: z_macros_key_layer_9{
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = 
                 <&macro_param_1to1>,
-                <&macro_press &kp MACRO_PLACEHOLDER>,
-                <&macro_press &mo 9>,
+                <&key_layer_toggle_release MACRO_PLACEHOLDER 9>,
                 <&macro_pause_for_release>,
                 <&macro_param_1to1>,
-                <&macro_release &kp MACRO_PLACEHOLDER>,
-                <&macro_release &mo 9>;
+                <&key_layer_toggle_release MACRO_PLACEHOLDER 9>;
         };
         z_macros_key_layer_10: z_macros_key_layer_10{
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = 
                 <&macro_param_1to1>,
-                <&macro_press &kp MACRO_PLACEHOLDER>,
-                <&macro_press &mo 10>,
+                <&key_layer_toggle_release MACRO_PLACEHOLDER 10>,
                 <&macro_pause_for_release>,
                 <&macro_param_1to1>,
-                <&macro_release &kp MACRO_PLACEHOLDER>,
-                <&macro_release &mo 10>;
+                <&key_layer_toggle_release MACRO_PLACEHOLDER 10>;
         };
     };
 };
