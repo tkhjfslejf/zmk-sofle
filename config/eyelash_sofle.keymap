@@ -84,6 +84,14 @@
             toggle-mode;
         };
 
+        // 同时触发按键和层 - 开关形式 自动释放已按下的按键
+        key_layer_toggle_release: key_layer_toggle_release {
+            compatible = "zmk,behavior-key-layer";
+            #binding-cells = <2>;
+            toggle-mode;
+            release_on_other_key;
+        };
+
     };
 
     combos {
