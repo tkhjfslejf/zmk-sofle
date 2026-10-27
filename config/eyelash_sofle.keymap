@@ -147,5 +147,18 @@
             display-name = "LAYER4";
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
+        
+        layer5 {status = "reserved";};
+        layer6 {status = "reserved";};
+        layer7 {status = "reserved";};
+        layer8 {status = "reserved";};
+        layer9 {status = "reserved";};
+        layer10 {status = "reserved";};
+        layer11 {status = "reserved";};
+        layer12 {status = "reserved";};
+        layer13 {status = "reserved";};
+        layer14 {status = "reserved";};
+        layer15 {status = "reserved";};
+        layer16 {status = "reserved";};
     };
 };
