@@ -1,0 +1,26 @@
+/ {
+    behaviors {
+        // 同时触发按键和层
+        key_layer: key_layer {
+            compatible = "zmk,behavior-key-layer";
+            #binding-cells = <2>;
+            release-on-other-key;   // 按下时触发其他按键，自动释放已按下的按键
+        };
+
+        // 同时触发按键和层 - 开关形式
+        key_layer_toggle: key_layer_toggle {
+            compatible = "zmk,behavior-key-layer";
+            #binding-cells = <2>;
+            release-on-other-key;   // 按下时触发其他按键，自动释放已按下的按键
+            toggle-mode;    // 开关形式
+        };
+
+        // 同时触发按键和层 - 忽略修饰键
+        key_layer_n_csa: key_layer_n_csa {
+            compatible = "zmk,behavior-key-layer";
+            #binding-cells = <2>;
+            release-on-other-key;   // 按下时触发其他按键，自动释放已按下的按键
+            ignore-release-positions = <41 55 56 57>;  // 忽略指定位置的按键
+        };
+    };
+};
